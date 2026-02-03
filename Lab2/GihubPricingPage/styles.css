@@ -1,0 +1,164 @@
+body{
+    font-family: "Mona Sans", "Mona Sans Header Fallback", -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    font-feature-settings: unset;
+    color: #24292f;
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 60px 20px;
+}
+.header {
+    text-align: center;
+    margin-bottom: 24px;
+}
+
+.header h1 {
+    font-size: 32px;
+    font-weight: 800;
+    margin-bottom: 20px;
+    letter-spacing: -0.5px;
+}
+
+.header p {
+    font-size: 16px;
+    color: #57606a;
+    max-width: 900px;
+    margin: 0 auto 32px;
+}
+
+.trail-button {
+    display: inline-block;
+    background-color: #24292f;
+    color: white;
+    padding: 12px 24px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 14px;
+    margin-top: 10px;
+    margin-bottom: 60px;
+    max-width: 320px;
+}
+
+.trail-button:hover{
+    background-color: #404142;
+}
+
+.pricing-cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    margin-top: 40px;
+
+}
+
+.card{
+    padding: 10px;
+    border: 0px;
+    border-radius: 10px;
+    box-shadow: 0px 50px 80px 12px #afb1b4;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.card-header{
+    text-align: center;
+}
+
+.dollar-sup{
+    font-size: 24px;
+    font-weight: 300;
+}
+
+.pricing-cards-price{
+    font-size: 40px;
+    font-weight: 400;
+}
+
+.usd{
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.card-button{
+    display: flex;
+    justify-content: center;
+}
+
+.white-trail-button{
+    display: inline-block;
+    color: black;
+    background-color: white;
+    font-size: 16px;
+    font-weight: 700;
+    text-align: center;
+    border: 1px solid black;
+    width: 100%;
+}
+
+
+.white-trail-button:hover{
+    border: 3px solid black;
+}
+
+#secondary-enterprice-button{
+    margin-left: 15px;
+    width: 30%;
+}
+#secondary-enterprice-button-black{
+    font-size: 16px;
+    font-weight: 700;
+    text-align: center;
+    width: 30%;
+}
+
+.card-add-on-text{
+    color:#4b36c5;
+}
+
+.card h4{
+    color: #2377e4;
+}
+
+.feature-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+}
+
+.feature-item::before {
+    content: "›";
+    font-size: 18px;
+}
+
+.addons {
+    text-align: center;
+    padding: 80px 20px 40px 20px;
+}
+
+.addons h2{
+    font-size: 60px;
+    font-weight: 800;
+}
+
+.addon-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 2fr);
+    gap: 18px;
+    margin-top: 28px;
+}
+
+.addon-card {
+    background-color: white;
+    text-align: left;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    font-weight: bold;
+    font-size: 1rem;
+}
+
+.addon-card p{
+    color: #57606a;
+    font-weight: 400;
+}
