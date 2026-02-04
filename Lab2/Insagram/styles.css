@@ -31,12 +31,6 @@ body {
     font-weight: 500;
 }
 
-.promo span {
-    background: linear-gradient(45deg, #f58529, #dd2a7b);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-}
-
 .preview {
     margin-top: 40px;
     max-width: 340px;
