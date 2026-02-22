@@ -1,0 +1,15 @@
+<h2 class="heading">Online Store</h2>
+
+<app-category-list
+  [categories]="categories"
+  [activeCategory]="activeCategory"
+  (categoryChange)="onCategoryChange($event)">
+</app-category-list>
+
+<p *ngIf="filteredProducts.length === 0" class="empty">
+  No products found.
+</p>
+
+<div class="grid">
+  <app-product-item *ngFor="let p of filteredProducts" [product]="p"></app-product-item>
+</div>

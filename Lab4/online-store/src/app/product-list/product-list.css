@@ -1,0 +1,13 @@
+.heading { margin: 10px 0; }
+
+.empty {
+  padding: 12px;
+  border: 1px dashed #bbb;
+  border-radius: 12px;
+}
+
+.grid {
+  display: grid;
+  gap: 14px;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+}
