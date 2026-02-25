@@ -1,15 +1,14 @@
-<h2 class="heading">Online Store</h2>
+<h2 class="heading">Kaspi Store</h2>
 
-<app-category-list
-  [categories]="categories"
-  [activeCategory]="activeCategory"
-  (categoryChange)="onCategoryChange($event)">
-</app-category-list>
+<button (click)="sortProducts(true)">ascending</button>
+<button (click)="sortProducts(false)">descending</button>
 
-<p *ngIf="filteredProducts.length === 0" class="empty">
-  No products found.
-</p>
+@if (filteredProducts.length === 0) {
+  <p class="empty">No products found.</p>
+}
 
 <div class="grid">
-  <app-product-item *ngFor="let p of filteredProducts" [product]="p"></app-product-item>
+  @for (p of filteredProducts; track p.id) {
+    <app-product-item [product]="p" />
+  }
 </div>

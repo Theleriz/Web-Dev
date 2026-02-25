@@ -1,13 +1,17 @@
 <div class="cats">
-  <button class="cat" [class.active]="activeCategory === 'All'" (click)="selectCategory('All')">
+  <button 
+    class="cat" 
+    [class.active]="activeCategory === 'All'" 
+    (click)="selectCategory('All')">
     All
   </button>
 
-  <button
-    class="cat"
-    *ngFor="let c of categories"
-    [class.active]="activeCategory === c"
-    (click)="selectCategory(c)">
-    {{ c }}
-  </button>
+  @for (c of categories; track c) {
+    <button
+      class="cat"
+      [class.active]="activeCategory === c"
+      (click)="selectCategory(c)">
+      {{ c }}
+    </button>
+  }
 </div>

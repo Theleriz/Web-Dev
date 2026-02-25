@@ -3,7 +3,7 @@
     <button class="nav left" (click)="prevImage()">‹</button>
 
     <img
-      [src]="product.images?.length ? product.images[currentImageIndex] : product.image"
+      [src]="product.images.length ? product.images[currentImageIndex] : product.image"
       [alt]="product.name"
       class="img"
     />
@@ -18,12 +18,13 @@
     <p class="price">{{ product.price | number }} ₸</p>
 
     <div class="meta">
-      <span class="rating">⭐ {{ product.rating }}/5</span>
+      <span class="rating">✔ {{ product.rating }}/5</span>
 
-      <span *ngIf="product.available; else notAvail" class="ok">In stock</span>
-      <ng-template #notAvail>
+      @if (product.available) {
+        <span class="ok">In stock</span>
+      } @else {
         <span class="no">Out of stock</span>
-      </ng-template>
+      }
     </div>
 
     <a class="btn" [href]="product.link" target="_blank" rel="noopener">

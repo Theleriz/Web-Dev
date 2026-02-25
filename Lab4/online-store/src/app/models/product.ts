@@ -4,8 +4,8 @@ export interface Product {
   description: string;
   price: number;
   rating: number;
-  image: string;       // главное фото (можно оставить)
-  images: string[];    // минимум 3 фото
+  image: string;   
+  images: string[]; 
   link: string;
 
   category: string;

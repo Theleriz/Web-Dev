@@ -10,7 +10,7 @@ import { CategoryList } from '../category-list/category-list';
 @Component({
   selector: 'app-product-list',
   standalone: true,
-  imports: [CommonModule, ProductItem, CategoryList],
+  imports: [CommonModule, ProductItem],
   templateUrl: './product-list.html',
   styleUrl: './product-list.css'
 })
@@ -29,5 +29,15 @@ export class ProductList {
 
   onCategoryChange(cat: string) {
     this.activeCategory = cat;
+  }
+
+  sortProducts(ascending: boolean): Product[] {
+    if(ascending) {
+      return this.filteredProducts.sort((a, b) => b.price - a.price);
+    }
+    if(!ascending) {
+      return this.filteredProducts.sort((a, b) => a.price - b.price);
+    }
+    return [];
   }
 }
