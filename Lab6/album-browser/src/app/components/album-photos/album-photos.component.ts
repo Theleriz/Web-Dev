@@ -16,7 +16,7 @@ export class AlbumPhotosComponent implements OnInit {
   albumId!: number;
   loading = true;
 
-  constructor(private route: ActivatedRoute, private router: Router, private albumService: AlbumService) {}
+  constructor(private route: ActivatedRoute, private router: Router, private albumService: AlbumService) { }
 
   ngOnInit(): void {
     this.albumId = Number(this.route.snapshot.paramMap.get('id'));

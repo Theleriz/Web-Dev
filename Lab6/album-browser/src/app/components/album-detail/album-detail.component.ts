@@ -23,7 +23,7 @@ export class AlbumDetailComponent implements OnInit {
     private route: ActivatedRoute,
     private router: Router,
     private albumService: AlbumService
-  ) {}
+  ) { }
 
   ngOnInit(): void {
     const id = Number(this.route.snapshot.paramMap.get('id'));

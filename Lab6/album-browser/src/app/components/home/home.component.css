@@ -1,22 +1,73 @@
 .hero {
-  min-height: calc(100vh - 64px); display: flex; flex-direction: column;
-  align-items: center; justify-content: center; padding: 3rem 2rem;
-  background: linear-gradient(180deg, #000000 0%, #141414 100%); text-align: center;
+    min-height: calc(100vh - 64px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 3rem 2rem;
+    background: #F5EDF0;
+    text-align: center;
 }
-.hero-icon { font-size: 4rem; margin-bottom: 1rem; }
-h1 { color: #fff; font-size: 2.5rem; margin: 0 0 1rem; }
-p { color: #b3b3b3; font-size: 1.1rem; max-width: 500px; margin: 0 auto 2rem; line-height: 1.7; }
+
+
+h1 {
+    color: #000000;
+    font-size: 2.5rem;
+    margin: 0 0 1rem;
+}
+
+p {
+    color: #000000;
+    font-size: 1.1rem;
+    max-width: 500px;
+    margin: 0 auto 2rem;
+    line-height: 1.7;
+}
+
 .btn-primary {
-  display: inline-block; background: #232323; color: #fff;
-  padding: 0.9rem 2.5rem; border-radius: 8px; text-decoration: none;
-  font-weight: 600; font-size: 1.05rem; transition: all 0.2s;
+    display: inline-block;
+    background: #b8bbbe;
+    color: #000000;
+    padding: 0.9rem 2.5rem;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.05rem;
+    transition: all 0.2s;
 }
-.btn-primary:hover { background: #00e80c; transform: translateY(-2px); }
-.features { display: flex; gap: 1.5rem; margin-top: 4rem; flex-wrap: wrap; justify-content: center; }
+
+.btn-primary:hover {
+    background: #292f35;
+    transform: translateY(-2px);
+}
+
+.features {
+    display: flex;
+    gap: 1.5rem;
+    margin-top: 4rem;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
 .feature-card {
-  background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1);
-  border-radius: 12px; padding: 1.5rem; width: 180px; color: #b3b3b3;
+    background: rgba(92, 89, 89, 0.05);
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    border-radius: 12px;
+    padding: 1.5rem;
+    width: 180px;
+    color: #b3b3b3;
 }
-.feature-card span { font-size: 2rem; }
-.feature-card h3 { color: #fff; margin: 0.5rem 0 0.3rem; }
-.feature-card p { font-size: 0.85rem; margin: 0; }
+
+.feature-card span {
+    font-size: 2rem;
+}
+
+.feature-card h3 {
+    color: #000000;
+    margin: 0.5rem 0 0.3rem;
+}
+
+.feature-card p {
+    font-size: 0.85rem;
+    margin: 0;
+}
