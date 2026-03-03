@@ -1,7 +1,7 @@
 <h2 class="heading">Kaspi Store</h2>
 
-<button (click)="sortProducts(true)">ascending</button>
-<button (click)="sortProducts(false)">descending</button>
+<button class="sort-button" (click)="sortProducts(true)">ascending</button>
+<button class="sort-button" (click)="sortProducts(false)">descending</button>
 
 @if (filteredProducts.length === 0) {
   <p class="empty">No products found.</p>
