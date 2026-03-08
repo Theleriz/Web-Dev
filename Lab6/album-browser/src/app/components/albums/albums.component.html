@@ -1,7 +1,7 @@
 <div class="albums-container">
   <h1>All Albums</h1>
 
-  <div *ngIf="loading" class="loading">
+  <div *ngIf="loading && albums.length < 1" class="loading">
     <div class="spinner"></div>
     <p>Loading albums...</p>
   </div>
@@ -16,7 +16,7 @@
       <div class="album-title">{{ album.title }}</div>
       <div class="album-footer">
         <span class="user-badge">User {{ album.userId }}</span>
-        <button class="btn-delete" (click)="deleteAlbum($event, album.id)">Delete</button>
+        <button class="btn-delete" (click)="deleteAlbum($event, album.id)">Delte</button>
       </div>
     </div>
   </div>

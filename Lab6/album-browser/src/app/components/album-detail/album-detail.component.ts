@@ -4,7 +4,7 @@ import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { AlbumService } from '../../services/album.service';
 import { Album } from '../../models/album.model';
-
+import { ChangeDetectorRef } from '@angular/core';
 @Component({
   selector: 'app-album-detail',
   standalone: true,
@@ -18,11 +18,13 @@ export class AlbumDetailComponent implements OnInit {
   loading = true;
   saving = false;
   saved = false;
+  nullInput = false;
 
   constructor(
     private route: ActivatedRoute,
     private router: Router,
-    private albumService: AlbumService
+    private albumService: AlbumService,
+    private cdr: ChangeDetectorRef
   ) { }
 
   ngOnInit(): void {
@@ -32,6 +34,7 @@ export class AlbumDetailComponent implements OnInit {
         this.album = data;
         this.editTitle = data.title;
         this.loading = false;
+        this.cdr.detectChanges();
       },
       error: () => { this.loading = false; }
     });
@@ -41,12 +44,19 @@ export class AlbumDetailComponent implements OnInit {
     if (!this.album) return;
     this.saving = true;
     const updated = { ...this.album, title: this.editTitle };
-    this.albumService.updateAlbum(updated).subscribe(() => {
+    if(this.editTitle.length > 0){
+      this.albumService.updateAlbum(updated).subscribe(() => {
       this.album!.title = this.editTitle;
       this.saving = false;
       this.saved = true;
+      this.cdr.detectChanges();
       setTimeout(() => this.saved = false, 2500);
     });
+    }else{
+      this.saving = false;
+      this.nullInput = true;
+    }
+    
   }
 
   viewPhotos(): void {

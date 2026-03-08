@@ -3,7 +3,7 @@ import { Router } from '@angular/router';
 import { CommonModule } from '@angular/common';
 import { AlbumService } from '../../services/album.service';
 import { Album } from '../../models/album.model';
-
+import { ChangeDetectorRef } from '@angular/core';
 @Component({
   selector: 'app-albums',
   standalone: true,
@@ -15,11 +15,11 @@ export class AlbumsComponent implements OnInit {
   albums: Album[] = [];
   loading = true;
 
-  constructor(private albumService: AlbumService, private router: Router) { }
+  constructor(private albumService: AlbumService, private router: Router, private cdr: ChangeDetectorRef) { }
 
   ngOnInit(): void {
     this.albumService.getAlbums().subscribe({
-      next: (data) => { this.albums = data; this.loading = false; },
+      next: (data) => { this.albums = data; this.loading = false; this.cdr.detectChanges(); },
       error: () => { this.loading = false; }
     });
   }

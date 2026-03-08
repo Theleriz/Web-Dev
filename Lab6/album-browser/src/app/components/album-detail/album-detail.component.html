@@ -1,7 +1,7 @@
 <div class="detail-container">
   <button class="btn-back" (click)="goBack()">← Back to Albums</button>
 
-  <div *ngIf="loading" class="loading">
+  <div *ngIf="loading && (album !== null)" class="loading">
     <div class="spinner"></div>
     <p>Loading album...</p>
   </div>
@@ -21,12 +21,13 @@
         <button class="btn-save" (click)="saveAlbum()" [disabled]="saving">
           {{ saving ? 'Saving...' : 'Save Changes' }}
         </button>
-        <span *ngIf="saved" class="saved-msg">✓ Saved successfully!</span>
+        <span *ngIf="saved" class="saved-msg">Saved successfully</span>
+        <span *ngIf="nullInput" class="error-msg">Please enter valid tile</span>
       </div>
     </div>
 
     <div class="detail-actions">
-      <button class="btn-photos" (click)="viewPhotos()">🖼️ View Photos</button>
+      <button class="btn-photos" (click)="viewPhotos()">View Photo</button>
     </div>
   </div>
 </div>

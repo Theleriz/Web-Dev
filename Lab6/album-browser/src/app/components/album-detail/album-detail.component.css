@@ -64,8 +64,8 @@
 }
 
 .user-badge {
-  color: #F5EDF0;
-  background: rgba(68, 68, 68, 0.06);
+  color: #000000;
+  background: rgba(138, 135, 135, 0.06);
   padding: 0.2rem 0.8rem;
   border-radius: 20px;
   font-size: 0.85rem;
@@ -91,11 +91,11 @@ label {
 
 .edit-input {
   width: 100%;
-  background: #000000;
+  background: #898989;
   border: 1px solid rgba(81, 81, 81, 0.15);
   border-radius: 8px;
   padding: 0.8rem 1rem;
-  color: #000000;
+  color: #ffffff;
   font-size: 1rem;
   transition: border-color 0.2s;
   outline: none;
@@ -139,8 +139,8 @@ label {
 }
 
 .btn-photos {
-  background: #F5EDF0;
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: #8e8e8e;
+  border: 1px solid rgba(63, 63, 63, 0.1);
   color: #fff;
   padding: 0.8rem 2rem;
   border-radius: 8px;
