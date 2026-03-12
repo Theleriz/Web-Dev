@@ -2,24 +2,42 @@
 const taskInput = document.getElementById('taskInput');
 const addBtn = document.getElementById('addBtn');
 const taskList = document.getElementById('taskList');
+const boxTitle = document.getElementById('boxTitle');
+const mainBody = document.getElementById('body');
 
-let tasks = JSON.parse(localStorage.getItem('tasks')) || []; //ebale\enable json synchronizer
+const viewActiveBtn = document.getElementById('view-active-task');
+const viewCompletedBtn = document.getElementById('view-completed-task');
+
+let tasks = JSON.parse(localStorage.getItem('tasks')) || []; // Toggles json synchronizer
 
 function init() {
     renderTasks();
-    
     // Add event listeners
     addBtn.addEventListener('click', addTask);
     taskInput.addEventListener('keypress', (e) => {
         if (e.key === 'Enter') {
             addTask();
         }
+        if(e.key === 'Escape') {
+            changeBoxTitle();
+        }
+    });
+
+    viewActiveBtn.addEventListener('click', () => {
+        const activeTasks = tasks.filter(task => !task.completed);
+        renderFilteredTasks(activeTasks);
+    });
+    
+    viewCompletedBtn.addEventListener('click', () => {
+        const completedTasks = tasks.filter(task => task.completed);
+        renderFilteredTasks(completedTasks);
     });
 }
 
 function addTask() {
     const taskText = taskInput.value.trim();
     
+    // Validate empty input
     if (taskText === '') {
         alert('Please enter a task!');
         return;
@@ -73,6 +91,48 @@ function renderTasks() {
         li.innerHTML = `
             <input 
                 type="checkbox" 
+                class="task-checkbox" 
+                ${task.completed ? 'checked' : ''}
+                onchange="toggleTask(${task.id})"
+            />
+            <span class="task-text">${task.text}</span>
+            <button class="delete-btn" onclick="deleteTask(${task.id})">Delete</button>
+        `;
+        
+        taskList.appendChild(li);
+    });
+}
+
+function resetTasks() {
+    if (confirm('Are you sure you want to reset all tasks?')) {
+        tasks = [];
+        saveTasks();
+        renderTasks();
+    }
+}
+
+function changeBoxTitle() {
+    const newTitle = prompt('Enter new box title:');
+    if (newTitle) {
+        boxTitle.textContent = newTitle;
+    }
+}
+
+function renderFilteredTasks(filteredTasks) {
+    taskList.innerHTML = '';
+    
+    if (filteredTasks.length === 0) {
+        taskList.innerHTML = '<div class="empty-message">No tasks to display!</div>';
+        return;
+    }
+    
+    filteredTasks.forEach(task => {
+        const li = document.createElement('li');
+        li.className = `task-item ${task.completed ? 'completed' : ''}`;
+        
+        li.innerHTML = `
+            <input 
+                type="checkbox"           
                 class="task-checkbox" 
                 ${task.completed ? 'checked' : ''}
                 onchange="toggleTask(${task.id})"
