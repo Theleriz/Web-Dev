@@ -1,0 +1,270 @@
+[
+  {
+    "model": "api.category",
+    "pk": 1,
+    "fields": {
+      "name": "Smartphones"
+    }
+  },
+  {
+    "model": "api.category",
+    "pk": 2,
+    "fields": {
+      "name": "Laptops"
+    }
+  },
+  {
+    "model": "api.category",
+    "pk": 3,
+    "fields": {
+      "name": "Headphones"
+    }
+  },
+  {
+    "model": "api.category",
+    "pk": 4,
+    "fields": {
+      "name": "Tablets"
+    }
+  },
+  {
+    "model": "api.product",
+    "pk": 1,
+    "fields": {
+      "name": "iPhone 13",
+      "price": 310000,
+      "description": "Powerful Apple smartphone with great camera and performance.",
+      "count": 10,
+      "is_active": true,
+      "category": 1
+    }
+  },
+  {
+    "model": "api.product",
+    "pk": 2,
+    "fields": {
+      "name": "iPhone 14",
+      "price": 350000,
+      "description": "Powerful Apple smartphone with great camera and performance.",
+      "count": 10,
+      "is_active": true,
+      "category": 1
+    }
+  },
+  {
+    "model": "api.product",
+    "pk": 3,
+    "fields": {
+      "name": "iPhone 15",
+      "price": 390000,
+      "description": "Powerful Apple smartphone with great camera and performance.",
+      "count": 10,
+      "is_active": true,
+      "category": 1
+    }
+  },
+  {
+    "model": "api.product",
+    "pk": 4,
+    "fields": {
+      "name": "iPhone 16",
+      "price": 450000,
+      "description": "Powerful Apple smartphone with great camera and performance.",
+      "count": 10,
+      "is_active": true,
+      "category": 1
+    }
+  },
+  {
+    "model": "api.product",
+    "pk": 5,
+    "fields": {
+      "name": "iPhone 17",
+      "price": 560000,
+      "description": "Powerful Apple smartphone with great camera and performance.",
+      "count": 10,
+      "is_active": true,
+      "category": 1
+    }
+  },
+  {
+    "model": "api.product",
+    "pk": 6,
+    "fields": {
+      "name": "MacBook Air M2",
+      "price": 699990,
+      "description": "Thin and light laptop with Apple M2 chip, 8 GB RAM.",
+      "count": 5,
+      "is_active": true,
+      "category": 2
+    }
+  },
+  {
+    "model": "api.product",
+    "pk": 7,
+    "fields": {
+      "name": "ASUS ROG Zephyrus G14",
+      "price": 1955000,
+      "description": "Gaming laptop with AMD Ryzen 9, RTX 4060, 165Hz display.",
+      "count": 3,
+      "is_active": true,
+      "category": 2
+    }
+  },
+  {
+    "model": "api.product",
+    "pk": 8,
+    "fields": {
+      "name": "Lenovo ThinkPad X1 Carbon",
+      "price": 1574000,
+      "description": "Business ultrabook, Intel Core i7, 16 GB RAM, 512 GB SSD.",
+      "count": 4,
+      "is_active": true,
+      "category": 2
+    }
+  },
+  {
+    "model": "api.product",
+    "pk": 9,
+    "fields": {
+      "name": "Dell XPS 15",
+      "price": 1799990,
+      "description": "Premium laptop with OLED display, Intel Core i9, RTX 4070.",
+      "count": 2,
+      "is_active": true,
+      "category": 2
+    }
+  },
+  {
+    "model": "api.product",
+    "pk": 10,
+    "fields": {
+      "name": "HP Spectre x360",
+      "price": 959990,
+      "description": "2-in-1 laptop, Intel Core i7, OLED touch display, 16 GB RAM.",
+      "count": 6,
+      "is_active": true,
+      "category": 2
+    }
+  },
+  {
+    "model": "api.product",
+    "pk": 11,
+    "fields": {
+      "name": "Sony WH-1000XM5",
+      "price": 149990,
+      "description": "Industry-leading noise cancellation, 30h battery, Hi-Res audio.",
+      "count": 8,
+      "is_active": true,
+      "category": 3
+    }
+  },
+  {
+    "model": "api.product",
+    "pk": 12,
+    "fields": {
+      "name": "Apple AirPods Pro 2",
+      "price": 129990,
+      "description": "Active noise cancellation, Adaptive Audio, H2 chip.",
+      "count": 15,
+      "is_active": true,
+      "category": 3
+    }
+  },
+  {
+    "model": "api.product",
+    "pk": 13,
+    "fields": {
+      "name": "Samsung Galaxy Buds 3 Pro",
+      "price": 89990,
+      "description": "ANC earbuds with Hi-Fi sound, 360 Audio, 37h total battery.",
+      "count": 12,
+      "is_active": true,
+      "category": 3
+    }
+  },
+  {
+    "model": "api.product",
+    "pk": 14,
+    "fields": {
+      "name": "Bose QuietComfort 45",
+      "price": 119990,
+      "description": "Legendary Bose comfort with world-class noise cancellation.",
+      "count": 7,
+      "is_active": true,
+      "category": 3
+    }
+  },
+  {
+    "model": "api.product",
+    "pk": 15,
+    "fields": {
+      "name": "JBL Tune 770NC",
+      "price": 33990,
+      "description": "Foldable headphones with ANC, 70h playtime, JBL Pure Bass.",
+      "count": 20,
+      "is_active": true,
+      "category": 3
+    }
+  },
+  {
+    "model": "api.product",
+    "pk": 16,
+    "fields": {
+      "name": "iPad Pro M4 11\"",
+      "price": 512630,
+      "description": "Most powerful iPad ever with M4 chip, Ultra Retina XDR display.",
+      "count": 9,
+      "is_active": true,
+      "category": 4
+    }
+  },
+  {
+    "model": "api.product",
+    "pk": 17,
+    "fields": {
+      "name": "Samsung Galaxy Tab S9",
+      "price": 303000,
+      "description": "Android tablet with AMOLED display, IP68, S Pen included.",
+      "count": 6,
+      "is_active": true,
+      "category": 4
+    }
+  },
+  {
+    "model": "api.product",
+    "pk": 18,
+    "fields": {
+      "name": "Xiaomi Pad 6",
+      "price": 157340,
+      "description": "Snapdragon 870, 144Hz display, quad speakers, 8840 mAh.",
+      "count": 11,
+      "is_active": true,
+      "category": 4
+    }
+  },
+  {
+    "model": "api.product",
+    "pk": 19,
+    "fields": {
+      "name": "Lenovo Idea Tab Pro",
+      "price": 249990,
+      "description": "12.7\" AMOLED, Snapdragon 870, stylus support, 10200 mAh.",
+      "count": 5,
+      "is_active": true,
+      "category": 4
+    }
+  },
+  {
+    "model": "api.product",
+    "pk": 20,
+    "fields": {
+      "name": "Huawei MatePad Pro 13.2\"",
+      "price": 499830,
+      "description": "OLED display, HarmonyOS 4, M-Pencil support, 10100 mAh.",
+      "count": 4,
+      "is_active": true,
+      "category": 4
+    }
+  }
+]
